@@ -1,6 +1,6 @@
 # C/C++语法知识
 - `std::size_t`
-	* std::size_t 是 `sizeof `运算符还有 `sizeof...`` 运算符和 `alignof` 运算符 (C++11 起)所返回的一种无符号整数类型。
+	* std::size_t 是 `sizeof `运算符还有 `sizeof...` 运算符和 `alignof` 运算符 (C++11 起)所返回的一种无符号整数类型。
     * 注意：size_t 可以存放下理论上可能存在的对象的最大大小，该对象可以是任何类型，包括数组。大小无法以 std::size_t 表示的类型是病式的。 (C++14 起)在许多平台上（使用分段寻址的系统除外），std::size_t 可以存放下任何非成员的指针，此时可以视作其与 `std::uintptr_t `同义。
     * std::size_t 通常被用于`数组索引`和`循环计数`。使用其它类型来进行数组索引操作的程序可能会在某些情况下出错，例如在 64 位系统中使用 unsigned int 进行索引时，如果索引号超过 UINT_MAX 或者依赖于 32 位取模运算的话，程序就会出错。
-    * 在对诸如 std::string、std::vector 等 C++ 容器进行索引操作时，正确的类型是该容器的成员 typedef size_type，而该类型通常被定义为与 std::size_t 相同。
+    * 在对诸如 std::string、std::vector 等 C++ 容器进行索引操作时，正确的类型是该容器的成员 typedef size_type，而该类型通常被定义为与 std::size_t 相同。 
